@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="project.css">
+     
+</head>
+<body>
+<header>
+   <header>
+        <div class="logo">
+            <a href="#"><img src="c:\Users\ACER\Desktop\travel_website\home\logo.jpg"></a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</header>
+<main>
+
+
+  <section id="hero" class="hero">
+
+    <div class="hero-video">
+        <video autoplay muted loop playsinline>
+            <source src="c:\Users\ACER\Desktop\travel_website\home\HOLIDAY CURVE-vmake.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="hero-content">
+        <button class="hero-button" onclick="openModal()">Book Now</button>
+    </div>
+
+</section>
+
+
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Book Your Trip!</h2>
+      <form class="f_button" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="Where To?" required>
+        <input type="number" placeholder="How Many (guests)" required>
+        <input type="date" placeholder="Arrivals" required>
+        <input type="date" placeholder="Leaving" required>
+        <input type="submit" value="Submit">
+      </form>      
+    </div>
+  </div>
+  <div class="thankyou-modal" id="thankyouModal">
+    <div class="thankyou-content">
+      <div class="checkmark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+          <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+            <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+          </path>
+        </svg>
+      </div>        
+      <h2>Thank You!</h2>
+      <p>Thank you for choosing us. Your trip is successfully booked!</p>
+    </div>
+  </div>
+
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      closeModal();
+      document.getElementById("thankyouModal").style.display = "flex";
+      
+      // Auto close thank you modal after 3 seconds (optional)
+      setTimeout(() => {
+        document.getElementById("thankyouModal").style.display = "none";
+      }, 3000);
+    }
+  </script>
+  
+  <script>
+    function openModal() {
+      document.getElementById("bookingModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("bookingModal").style.display = "none";
+    }
+  </script>
+
+</section>
+
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordabe Hotels</h3>
+            <p>Comfortable stays that fit your budget,
+                so you can relax without worrying about expenses.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>Food and drinks</h3>
+            <p>Savor delicious local and international cuisines,
+                crafted to delight every palate.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Safety Guide</h3>
+            <p>Your safety is our top priority wherever you go,
+                ensuring peace of mind throughout your journey.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>Fastest Travel</h3>
+            <p>Quick and convenient ways to reach your destination,
+                making every trip smooth and hassle-free.</p>
+        </div> 
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Around the world</h3>
+            <p>Explore breathtaking destinations across the globe, 
+                and create memories that last a lifetime.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures</h3>
+            <p> Thrilling experiences for the adventure seeker in you, 
+                taking excitement to the next level.</p>
+        </div>
+
+    </div>
+</section>
+    
+<section>
+  <div class="featured-destinations">
+      <h2>Popular Destinations</h2>
+        <div class="container">
+    
+        <div class="card">
+                <div class="card-image">
+                    <img src="c:\Users\ACER\Desktop\travel_website\destinations\new york.jpg">
+                </div>
+            <div class="card-content">
+                <h2>New York City</h2><br>
+                <p>visit the city that never sleeps and discover its iconic landmarks,
+                    world class museums, and diverse neighborhoods.</p>
+            </div>
+        </div>
+    
+        <div class="card">
+                <div class="card-image">
+                    <img src="c:\Users\ACER\Desktop\travel_website\destinations\paris.jpg">
+                </div>
+                <div class="card-content">
+                    <h2>Paris</h2><br>
+                    <p>Experience the romance and culture of the city of lights from the 
+                        Eiffel Tower to the Louvre Museum.</p>
+                </div>
+        </div>
+        
+        <div class="card">
+                <div class="card-image">
+                  <img src="c:\Users\ACER\Desktop\travel_website\destinations\tokyo.jpg">
+                </div>
+                <div class="card-content">
+                    <h2>Tokyo</h2><br>
+                    <p>Explore the vibrant city of Tokyo and immerse yourself in its unique
+                        blend of ancient traditions and modern technology.</p>
+                </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+              <img src="c:\Users\ACER\Desktop\travel_website\destinations\dubai.jpg">
+            </div>
+            <div class="card-content">
+                <h2>Dubai</h2><br>
+                <p>Visit the city of dreams and explore its iconic skyscrapers, 
+                    world-class shopping, and vibrant cultural experiences.</p>
+            </div>
+        </div>
+        </div>
+        
+        <a href="destinations.html"><button class="button" style="--clr: #7808d0">
+            <span class="button__icon-wrapper">
+              <svg
+                viewBox="0 0 14 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="button__icon-svg"
+                width="10"
+              >
+                <path
+                  d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+          
+              <svg
+                viewBox="0 0 14 15"
+                fill="none"
+                width="10"
+                xmlns="http://www.w3.org/2000/svg"
+                class="button__icon-svg button__icon-svg--copy"
+              >
+                <path
+                  d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </span>
+            Explore All
+          </button>
+        </a>
+    </div>   
+    <br>
+</section>
+
+<section>
+  <div class="featured-destinations">
+      <h2>Featured Hotels</h2>
+      <div class="container">
+  
+      <div class="card">
+              <div class="card-image">
+                  <img src="c:\Users\ACER\Desktop\travel_website\hotels\1.jpg">
+              </div>
+          <div class="card-content">
+              <h2>The Ritz carlton</h2><br>
+              <p>Experience luxury accomodations and impeccable service at the Ritz
+                Carlton, located in the heart of the city.</p>
+          </div>
+      </div>
+  
+      <div class="card">
+              <div class="card-image">
+                  <img src="c:\Users\ACER\Desktop\travel_website\hotels\2.jpg">
+              </div>
+              <div class="card-content">
+                  <h2>The Four Seasons</h2><br>
+                  <p>Relax in style at the four Seasons, featuring breathtaking views, an
+                    award-winning spa, and gourmet dinning options.</p>
+              </div>
+      </div>
+      
+      <div class="card">
+              <div class="card-image">
+                <img src="c:\Users\ACER\Desktop\travel_website\hotels\3.jpg">
+              </div>
+              <div class="card-content">
+                  <h2>The waldorf Astoria</h2><br>
+                  <p>Indulge in luxury at The waldorf Astoria, a historic landmark
+                    hotel renowned for its elegance and sophistication.</p>
+              </div>
+      </div>
+
+      <div class="card">
+          <div class="card-image">
+            <img src="c:\Users\ACER\Desktop\travel_website\hotels\4.jpg">
+          </div>
+          <div class="card-content">
+              <h2>The St. Regis</h2><br>
+              <p>nparalleled luxury awaits at The St. Regis, 
+              offering personalized service, exquisite dining, and timeless elegance.</p>
+          </div>
+      </div>
+      </div>
+      
+     <a href="hotels.html"> <button class="button" style="--clr: #7808d0">
+          <span class="button__icon-wrapper">
+            <svg
+              viewBox="0 0 14 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon-svg"
+              width="10"
+            >
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"
+              ></path>
+            </svg>
+        
+            <svg
+              viewBox="0 0 14 15"
+              fill="none"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon-svg button__icon-svg--copy"
+            >
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </span>
+          Explore All
+        </button>
+    </a>
+  </div>   
+  <br>
+</section>
+
+<section>
+  <div class="featured-destinations">
+      <h2>Featured Activities</h2>
+      <div class="container">
+  
+      <div class="card">
+              <div class="card-image">
+                  <img src="c:\Users\ACER\Desktop\travel_website\activities\1.jpg">
+              </div>
+          <div class="card-content">
+              <h2>Hiking the Grand canyon</h2><br>
+              <p>Explore the breathtaking beauty of the grand canyon on a guided
+                hiking tour.</p>
+          </div>
+      </div>
+  
+      <div class="card">
+              <div class="card-image">
+                  <img src="c:\Users\ACER\Desktop\travel_website\activities\2.jpg">
+              </div>
+              <div class="card-content">
+                  <h2>Whale watching in Alaska</h2><br>
+                  <p>Experience the thrill of seeing majestic whales up close on a
+                    scenic boat tour in Alaska.</p>
+              </div>
+      </div>
+      
+      <div class="card">
+              <div class="card-image">
+                <img src="c:\Users\ACER\Desktop\travel_website\activities\3.jpg">
+              </div>
+              <div class="card-content">
+                  <h2>Snorkeling in Hawaii</h2><br>
+                  <p>Discover the vibrant underwater world of Hawaii on a guided
+                    Snorkeling excursion.</p>
+              </div>
+      </div>
+
+      <div class="card">
+          <div class="card-image">
+            <img src="c:\Users\ACER\Desktop\travel_website\activities\4.jpg">
+          </div>
+          <div class="card-content">
+              <h2>Hot Air Ballooning in Cappadocia</h2><br>
+              <p>Soar above the stunning landscapes of Cappadocia 
+                in a magical hot air balloon ride at sunrise.</p>
+          </div>
+      </div>
+      </div>
+      
+      <a href="activities.html"><button class="button" style="--clr: #7808d0">
+          <span class="button__icon-wrapper">
+            <svg
+              viewBox="0 0 14 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon-svg"
+              width="10"
+            >
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"
+              ></path>
+            </svg>
+        
+            <svg
+              viewBox="0 0 14 15"
+              fill="none"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+              class="button__icon-svg button__icon-svg--copy"
+            >
+              <path
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </span>
+          Explore All
+        </button>
+    </a>
+  </div>   
+  <br>
+
+  <section class="travel-packages">
+    <div class="featured-destinations">
+      <h2>Our Packages</h2></div>
+    <div class="packages-grid">
+    
+        <!-- PACKAGE 1 -->
+    <div class="package-card">
+      <img src="c:\Users\ACER\Desktop\travel_website\packages\1.jpg" alt="Maafushi, Maldives" class="package-image">
+      <div class="package-content">
+        <div class="price">$300 <span>/ Per Person</span></div>
+        <h2>Maafushi, Maldives</h2>
+        <div class="rating">⭐ 4.9 <span>(3.9k Reviews)</span></div>
+        <p>Maafushi is a tropical paradise known for clear waters and vibrant coral reefs.It offers thrilling water sports and unforgettable marine life encounters.</p>
+        <button class="see-details" onclick="openvishesh('modal1')">See Details</button>
+      </div>
+    </div>
+           <!-- Modal -->
+    <div class="vishesh" id="modal1">
+      <div class="vishesh-content">
+        <span class="close" onclick="closevishesh('modal1')">&times;</span>
+        <h2>Maafushi, Maldives - Full Package Details</h2>
+        <div class="price">$300 <span>/ Per Person</span></div>
+
+
+        <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+
+        <!-- Hotel -->
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 1\hotel.jpg" alt="Ocean Breeze Hotel" class="hotel-image">
+        <p><strong>Hotel:</strong> Ocean Breeze Hotel (4-Star, Beach View)</p>
+
+        <!-- Activities -->
+        <div class="details">
+          <h3>Included Activities</h3>
+          <div class="activities-gallery">
+            <img src="c:\Users\ACER\Desktop\travel_website\package details\package 1\act_1.jpg" alt="Snorkeling">
+            <img src="c:\Users\ACER\Desktop\travel_website\package details\package 1\act_2.jpg" alt="Island Tour">
+            <img src="c:\Users\ACER\Desktop\travel_website\package details\package 1\act_3.jpg" alt="Cruise">
+          </div>
+        </div>
+
+        <!-- Facilities -->
+        <p><strong>Facilities:</strong> Free WiFi, Breakfast Included, Airport Pickup, Spa Access</p>
+
+        <!-- Description -->
+        <p><strong>Description:</strong> Maafushi offers an ideal mix of relaxation and adventure. From beach lounging to coral diving, everything is included!</p>
+
+        <h3>Book Your Trip</h3>
+        <form class="details_button"  onsubmit="handleSubmit(event)">
+          <input type="text" placeholder="Full Name" >
+          <input type="email" placeholder="Email" >
+          <input type="tel" placeholder="Phone" >
+          <input type="text" placeholder="Address" >
+          <input type="number" placeholder="Number of Guests" >
+          <input type="date" placeholder="Arrival Date" >
+          <input type="date" placeholder="Departure Date" >
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+    <div class="thankyou-modal" id="thankyouModal">
+      <div class="thankyou-content">
+        <div class="checkmark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+            <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+            <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+              <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+            </path>
+          </svg>
+        </div>        
+        <h2>Thank You!</h2>
+        <p>Thank you for choosing us. Your trip is successfully booked!</p>
+      </div>
+    </div>
+  
+        
+        <div class="package-card">
+            <img src="c:\Users\ACER\Desktop\travel_website\packages\2.jpg" alt="Kashmir, Pakistan" class="package-image">
+            <div class="package-content">
+                <div class="price">$150 <span>/ Per Person</span></div>
+                <h2>Kashmir</h2>
+                <div class="rating">⭐ 4.8 <span>(1.2k Reviews)</span></div>
+                <p>Kashmir region of India is known for its beautiful landscapes, rich culture, and historical significance. Some popular tourist destinations in the region stunning valleys.</p>
+                <button class="see-details" onclick="openvishesh('modal2')">See Details</button>
+            </div>
+        </div>
+            <div class="vishesh" id="modal2">
+              <div class="vishesh-content">
+                <span class="close" onclick="closevishesh('modal2')">&times;</span>
+                <h2>Kashmir, India - Full Package Details</h2>
+                <div class="price">$150 <span>/ Per Person</span></div>
+
+        
+                <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
+
+                 <!-- Hotel -->
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 2\hotel.jpg" alt="Kashmir Valley Hotel" class="hotel-image">
+        <p><strong>Hotel:</strong> Kashmir Valley Hotel (5-Star, Mountain View)</p>
+
+        <!-- Activities -->
+        <div class="details">
+          <h3>Included Activities</h3>
+          <div class="activities-gallery">
+            <img src="c:\Users\ACER\Desktop\travel_website\package details\package 2\act_1.jpg" alt="Skiing in Gulmarg">
+            <img src="c:\Users\ACER\Desktop\travel_website\package details\package 2\act_2.jpg" alt="Shikara Ride on Dal Lake">
+            <img src="c:\Users\ACER\Desktop\travel_website\package details\package 2\act_3.jpg" alt="Garden Tour">
+          </div>
+        </div>
+
+        <!-- Facilities -->
+        <p><strong>Facilities:</strong> Free WiFi, Breakfast Included, Airport Pickup, Spa, Yoga Sessions</p>
+
+        <!-- Description -->
+        <p><strong>Description:</strong> Kashmir offers breathtaking scenic beauty, from the serene Dal Lake to the adventurous Gulmarg slopes. Explore lush gardens, snow-capped mountains, and authentic Kashmiri cuisine on this memorable trip!</p>
+
+        <h3>Book Your Trip</h3>
+        <form class="details_button" onsubmit="handleSubmit(event)">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Phone" required>
+          <input type="text" placeholder="Address" required>
+          <input type="number" placeholder="Number of Guests" required>
+          <input type="date" placeholder="Arrival Date" required>
+          <input type="date" placeholder="Departure Date" required>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+        
+    <div class="thankyou-modal" id="thankyouModal">
+      <div class="thankyou-content">
+        <div class="checkmark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+            <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+            <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+              <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+            </path>
+          </svg>
+        </div>        
+        <h2>Thank You!</h2>
+        <p>Thank you for choosing us. Your trip is successfully booked!</p>
+      </div>
+    </div>
+     
+        <div class="package-card">
+            <img src="c:\Users\ACER\Desktop\travel_website\packages\3.jpg" alt="Phi Phi Islands, Thailand" class="package-image">
+            <div class="package-content">
+                <div class="price">$140 <span>/ Per Person</span></div>
+                <h2>Phi Phi Islands, Thailand</h2>
+                <div class="rating">⭐ 4.9 <span>(1.2k Reviews)</span></div>
+                <p>The Phi Phi Islands are a group of small islands located in Krabi province, Thailand, known for stunning beaches.</p>
+                <button class="see-details" onclick="openvishesh('modal3')">See Details</button>
+            </div>
+        </div>
+           <!-- Modal -->
+<div class="vishesh" id="modal3">
+  <div class="vishesh-content">
+    <span class="close" onclick="closevishesh('modal3')">&times;</span>
+    <h2>Phi Phi Islands, Thailand - Full Package Details</h2>
+    <div class="price">$140 <span>/ Per Person</span></div>
+
+
+    <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
+
+    <!-- Hotel -->
+    <img src="c:\Users\ACER\Desktop\travel_website\package details\package 3\hotel.jpg" alt="Phi Phi Island Resort" class="hotel-image">
+    <p><strong>Hotel:</strong> Phi Phi Island Resort (4-Star, Beachfront)</p>
+
+    <!-- Activities -->
+    <div class="details">
+      <h3>Included Activities</h3>
+      <div class="activities-gallery">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 3\act_1.jpg" alt="Snorkeling">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 3\act_2.jpg" alt="Beach Party">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 3\act_3.jpg" alt="Boat Tour">
+      </div>
+    </div>
+
+    <!-- Facilities -->
+    <p><strong>Facilities:</strong> Free WiFi, Breakfast Included, Airport Pickup, Beachfront Dining, Spa</p>
+
+    <!-- Description -->
+    <p><strong>Description:</strong> The Phi Phi Islands are a tropical paradise known for their crystal-clear waters and vibrant marine life. Enjoy the ultimate getaway with beach parties, island hopping, snorkeling, and more!</p>
+
+    <h3>Book Your Trip</h3>
+    <form class="details_button" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <input type="date" placeholder="Arrival Date" required>
+      <input type="date" placeholder="Departure Date" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+        </div>
+        
+        <div class="thankyou-modal" id="thankyouModal">
+          <div class="thankyou-content">
+            <div class="checkmark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+                <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+                <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+                  <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+                </path>
+              </svg>
+            </div>        
+            <h2>Thank You!</h2>
+            <p>Thank you for choosing us. Your trip is successfully booked!</p>
+          </div>
+        </div>
+
+        <div class="package-card">
+            <img src="c:\Users\ACER\Desktop\travel_website\packages\4.jpeg" alt="Bora Bora" class="package-image">
+            <div class="package-content">
+                <div class="price">$450 <span>/ Per Person</span></div>
+                <h2>Bora Bora</h2>
+                <div class="rating">⭐ 4.9 <span>(2.5k Reviews)</span></div>
+                <p>Bora Bora is a luxury island destination known for its overwater bungalows, crystal-clear lagoon, good weather and wind and pristine white sand beaches.</p>
+                <button class="see-details" onclick="openvishesh('modal4')">See Details</button>
+            </div>
+        </div>
+            <!-- Modal -->
+<div class="vishesh" id="modal4">
+  <div class="vishesh-content">
+    <span class="close" onclick="closevishesh('modal4')">&times;</span>
+    <h2>Bora Bora, French Polynesia - Full Package Details</h2>
+    <div class="price">$450 <span>/ Per Person</span></div>
+
+
+    <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
+
+    <!-- Hotel -->
+    <img src="c:\Users\ACER\Desktop\travel_website\package details\package 4\hotel.jpg" alt="Bora Bora Lagoon Resort" class="hotel-image">
+    <p><strong>Hotel:</strong> Bora Bora Lagoon Resort (5-Star, Overwater Bungalows)</p>
+
+    <!-- Activities -->
+    <div class="details">
+      <h3>Included Activities</h3>
+      <div class="activities-gallery">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 4\act_1.jpg" alt="Snorkeling">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 4\act_2.jpg" alt="Cultural Tour">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 4\act_3.jpg" alt="Lagoon Boat Tour">
+      </div>
+    </div>
+
+    <!-- Facilities -->
+    <p><strong>Facilities:</strong> Free WiFi, Breakfast Included, Private Beach Access, Overwater Dining, Spa, Water Sports</p>
+
+    <!-- Description -->
+    <p><strong>Description:</strong> Bora Bora offers an unforgettable tropical experience with its pristine beaches, clear blue lagoons, and luxurious overwater bungalows. Explore the island’s beauty with snorkeling, lagoon tours, and cultural activities!</p>
+
+    <h3>Book Your Trip</h3>
+    <form class="details_button" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <input type="date" placeholder="Arrival Date" required>
+      <input type="date" placeholder="Departure Date" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+
+<div class="thankyou-modal" id="thankyouModal">
+  <div class="thankyou-content">
+    <div class="checkmark">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+        <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+        <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+          <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+        </path>
+      </svg>
+    </div>        
+    <h2>Thank You!</h2>
+    <p>Thank you for choosing us. Your trip is successfully booked!</p>
+  </div>
+</div>
+
+        <div class="package-card">
+          <img src="c:\Users\ACER\Desktop\travel_website\packages\5.jpg" alt="Bali, Indonesia" class="package-image">
+          <div class="package-content">
+              <div class="price">$200 <span>/ Per Person</span></div>
+              <h2>Bali, Indonesia</h2>
+              <div class="rating">⭐ 4.8 <span>(3.2k Reviews)</span></div>
+              <p>Bali is a popular Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches, and coral reefs. It's a haven for surfers, yogis, and culture.</p>
+              <button class="see-details" onclick="openvishesh('modal5')">See Details</button>
+          </div>
+        </div>
+         <!-- Modal -->
+<div class="vishesh" id="modal5">
+  <div class="vishesh-content">
+    <span class="close" onclick="closevishesh('modal5')">&times;</span>
+    <h2>Bali, Indonesia - Full Package Details</h2>
+    <div class="price">$200 <span>/ Per Person</span></div>
+
+
+    <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
+
+    <!-- Hotel -->
+    <img src="c:\Users\ACER\Desktop\travel_website\package details\package 5\hotel.jpg" alt="Bali Paradise Resort" class="hotel-image">
+    <p><strong>Hotel:</strong> Bali Paradise Resort (5-Star, Ocean View)</p>
+
+    <!-- Activities -->
+    <div class="details">
+      <h3>Included Activities</h3>
+      <div class="activities-gallery">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 5\act_1.jpg" alt="Surfing in Uluwatu">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 5\act_2.jpg" alt="Tegallalang Rice Terrace">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 5\act_3.jpg" alt="Beach Relaxation">
+      </div>
+    </div>
+
+    <!-- Facilities -->
+    <p><strong>Facilities:</strong> Free WiFi, Breakfast Included, Airport Pickup, Spa, Beach Access, Yoga Retreats</p>
+
+    <!-- Description -->
+    <p><strong>Description:</strong> Bali is the ultimate destination for both adventure and relaxation. Explore stunning temples, lush rice terraces, vibrant beaches, and world-class surfing, all while enjoying luxury accommodations and wellness activities.</p>
+
+    <h3>Book Your Trip</h3>
+    <form class="details_button" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <input type="date" placeholder="Arrival Date" required>
+      <input type="date" placeholder="Departure Date" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+      
+<div class="thankyou-modal" id="thankyouModal">
+  <div class="thankyou-content">
+    <div class="checkmark">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+        <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+        <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+          <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+        </path>
+      </svg>
+    </div>        
+    <h2>Thank You!</h2>
+    <p>Thank you for choosing us. Your trip is successfully booked!</p>
+  </div>
+</div>
+
+      <div class="package-card">
+          <img src="c:\Users\ACER\Desktop\travel_website\packages\6.jpg" alt="Santorini, Greece" class="package-image">
+          <div class="package-content">
+              <div class="price">$320 <span>/ Per Person</span></div>
+              <h2>Santorini, Greece</h2>
+              <div class="rating">⭐ 4.9 <span>(2.8k Reviews)</span></div>
+              <p>Santorini is a picturesque Greek island known for its white-washed buildings with blue domes, stunning sunsets, and dramatic views of the Aegean Sea.</p>
+              <button class="see-details" onclick="openvishesh('modal6')">See Details</button>
+          </div>
+      </div>
+          <!-- Modal -->
+<div class="vishesh" id="modal6">
+  <div class="vishesh-content">
+    <span class="close" onclick="closevishesh('modal6')">&times;</span>
+    <h2>Santorini, Greece - Full Package Details</h2>
+    <div class="price">$320 <span>/ Per Person</span></div>
+
+
+    <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+
+    <!-- Hotel -->
+    <img src="c:\Users\ACER\Desktop\travel_website\package details\package 6\hotel.jpg" alt="Santorini Cliffside Resort" class="hotel-image">
+    <p><strong>Hotel:</strong> Santorini Cliffside Resort (5-Star, Caldera View)</p>
+
+    <!-- Activities -->
+    <div class="details">
+      <h3>Included Activities</h3>
+      <div class="activities-gallery">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 6\act_1.jpg" alt="Santorini Sunset">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 6\act_2.jpg" alt="Boat Tour to Volcano">
+        <img src="c:\Users\ACER\Desktop\travel_website\package details\package 6\act_3.jpg" alt="Santorini Winery Tour">
+      </div>
+    </div>
+
+    <!-- Facilities -->
+    <p><strong>Facilities:</strong> Free WiFi, Breakfast Included, Pool with a View, Spa, Airport Pickup, Wine Tasting</p>
+
+    <!-- Description -->
+    <p><strong>Description:</strong> Santorini, known for its whitewashed buildings and blue-domed churches, offers a romantic getaway with breathtaking sunsets, volcanic tours, and rich history. Explore the island's ancient ruins, vineyards, and relax by the caldera.</p>
+
+    <h3>Book Your Trip</h3>
+    <form class="details_button" onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <input type="date" placeholder="Arrival Date" required>
+      <input type="date" placeholder="Departure Date" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>      
+    </div>
+
+    <div class="thankyou-modal" id="thankyouModal">
+      <div class="thankyou-content">
+        <div class="checkmark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 52 52">
+            <circle cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2"/>
+            <path fill="none" stroke="#4CAF50" stroke-width="4" d="M14 27l7 7 17-17">
+              <animate attributeName="stroke-dasharray" from="0,50" to="50,0" dur="0.5s" fill="freeze" />
+            </path>
+          </svg>
+        </div>        
+        <h2>Thank You!</h2>
+        <p>Thank you for choosing us. Your trip is successfully booked!</p>
+      </div>
+    </div>
+
+</section>
+
+<script>
+  function openvishesh(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closevishesh(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
+
+
+<section class="newsletter-section">
+    <div class="newsletter-container">
+      <div class="newsletter-text">
+        <h2>Subscribe to our<br>newsletter for updates</h2>
+      </div>
+      <div class="newsletter-form">
+        <p>For the best recommendation of you.<br>Please subscribe us.</p>
+        <form>
+          <input type="email" placeholder="Enter Your Email Here" required />
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+</section>
+
+<section class="reviews">
+  <div class="featured-destinations">
+    <h2>Customer Reviews</h2></div>
+  
+
+      
+      <button class="arrow-btn arrow-left" onclick="scrollReviews(-1)">
+          <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="arrow-btn arrow-right" onclick="scrollReviews(1)">
+          <i class="fas fa-chevron-right"></i>
+      </button>
+
+      
+      <div class="reviews-carousel" id="reviewsCarousel">
+         
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Daniel Carter">
+  </div>
+  <h3 class="reviewer-name">Daniel Carter</h3>
+  <p class="review-text">Fantastic platform for last-minute trips. I found great deals instantly!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/women/88.jpg" alt="Natalie Green">
+  </div>
+  <h3 class="reviewer-name">Natalie Green</h3>
+  <p class="review-text">Loved the user interface! Easy to navigate and book tickets fast.</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+      <i class="far fa-star"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Ryan Adams">
+  </div>
+  <h3 class="reviewer-name">Ryan Adams</h3>
+  <p class="review-text">The vacation packages were well-priced and very detailed. A+!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/women/73.jpg" alt="Sophia Turner">
+  </div>
+  <h3 class="reviewer-name">Sophia Turner</h3>
+  <p class="review-text">Our family trip was unforgettable thanks to this website!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Liam Wilson">
+  </div>
+  <h3 class="reviewer-name">Liam Wilson</h3>
+  <p class="review-text">I booked a honeymoon trip here and it was perfect. Thank you!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+  </div>
+</div>
+
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Miller">
+  </div>
+  <h3 class="reviewer-name">David Miller</h3>
+  <p class="review-text">Amazing experience! Everything was perfectly organized and smooth.</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Jessica Lee">
+  </div>
+  <h3 class="reviewer-name">Jessica Lee</h3>
+  <p class="review-text">One of the best travel platforms I’ve used. Highly recommended!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Chris Walker">
+  </div>
+  <h3 class="reviewer-name">Chris Walker</h3>
+  <p class="review-text">The booking process was quick and easy. Will definitely use again!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+  </div>
+</div>
+
+<div class="review-card">
+  <div class="review-profile">
+      <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Olivia Brown">
+  </div>
+  <h3 class="reviewer-name">Olivia Brown</h3>
+  <p class="review-text">Lovely customer service and a memorable trip overall!</p>
+  <div class="review-rating">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+  </div>
+</div>
+      </div>
+  </div>
+</section>
+
+
+
+    <section>
+        <footer class="site-footer">
+            <div class="footer-content">
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="project.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="destinations.html"><i class="fas fa-angle-right"></i> Destinations</a></li>
+                        <li><a href="hotels.html"><i class="fas fa-angle-right"></i> Hotels</a></li>
+                        <li><a href="activities.html"><i class="fas fa-angle-right"></i> Activities</a></li>
+                    </ul>
+                </div>
+    
+                
+                <div class="footer-column">
+                    <h3>Extra Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Ask Questions</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Terms Of Use</a></li>
+                    </ul>
+                </div>
+    
+              
+                <div class="footer-column">
+                    <h3>contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 7009912453</li>
+                        <li><i class="fas fa-phone"></i> +123-456-7890</li>
+                        <li><i class="fas fa-envelope"></i> Vishesh01327@gmail.Com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India - 400104</li>
+                    </ul>
+                </div>
+    
+               
+                <div class="footer-column">
+                    <h3>Social Media</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+
+  
+
+</main>
+<script>
+  function scrollReviews(direction) {
+      const container = document.getElementById('reviewsCarousel');
+      const scrollAmount = 320;
+      container.scrollBy({
+          left: direction * scrollAmount,
+          behavior: 'smooth'
+      });
+  }
+</script>
+</body>
+<script 
+src="https://kit.fontawesome.com/6558443b63.js"
+crossorigin="anonymous">
+</script>
+</html>

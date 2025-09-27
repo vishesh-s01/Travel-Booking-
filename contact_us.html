@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>contact us</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+        /* Modal base */
+        .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1000; 
+          left: 0;
+          top: 0;
+          width: 100%; 
+          height: 100%; 
+          overflow: auto; 
+          background-color: rgba(0,0,0,0.5); 
+        }
+        
+        /* Modal content */
+        .modal-content {
+          background-color: #fff;
+          margin: 15% auto; 
+          padding: 20px;
+          border-radius: 8px;
+          width: 300px;
+          text-align: center;
+        }
+        
+        /* Close button */
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 24px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        </style>
+        
+</head>
+<body>
+    <header>
+        <header>
+             <div class="logo">
+                 <a href="#"><img src="c:\Users\ACER\Desktop\travel_website\home\logo.jpg"></a>
+             </div>
+             <nav class="nav-menu">
+                 <ul>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="about_us.html">About</a></li>
+                     <li><a href="destinations.html">Destinations</a></li>
+                     <li><a href="hotels.html">Hotels</a></li>
+                     <li><a href="activities.html">Activities</a></li>
+                     <li><a href="contact_us.html">Contact</a></li>
+                 </ul>
+             </nav>
+         </header>
+     </header>
+
+    <section id="contact" class="contact_us">
+        <h3>Contact Us</h3>
+        <div class="contact-info">
+            <p>If you have any questions or would like to book a trip, please 
+                fill out the form below or contact us using the information provided.</p>
+                <ul>
+                    <li>
+                        <i class="fa fa-map-marker"></i>Mumbai, India - 400104
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="vishesh01327@gmail.com">vishesh01327@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:7009912453">7009912453</a>
+                    </li>    
+                </ul>
+        </div>
+        <form action="#" class="form">
+            <div class="form-item">
+                <input type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your Name">
+            </div>
+            <div class="form-item">
+                <input type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your Email">
+            </div>
+            <div class="form-item">
+                <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+
+            <button type="submit">submit</button>
+        </form>
+        <div id="submissionModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Form Submitted Successfully!</p>
+            </div>
+          </div>
+          
+    </section>
+    <script>
+        const form = document.querySelector('.form');
+        const modal = document.getElementById('submissionModal');
+        const closeBtn = document.querySelector('.close');
+        
+        form.addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent actual form submission
+          modal.style.display = "block"; // Show the modal
+        });
+        
+        // Close modal when user clicks on (x)
+        closeBtn.addEventListener('click', function() {
+          modal.style.display = "none";
+        });
+        
+        // Close modal if user clicks outside the modal content
+        window.addEventListener('click', function(e) {
+          if (e.target == modal) {
+            modal.style.display = "none";
+          }
+        });
+        </script>
+        
+
+    <section>
+        <footer class="site-footer">
+            <div class="footer-content">
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="project.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="destinations.html"><i class="fas fa-angle-right"></i> Destinations</a></li>
+                        <li><a href="hotels.html"><i class="fas fa-angle-right"></i> Hotels</a></li>
+                        <li><a href="activities.html"><i class="fas fa-angle-right"></i> Activities</a></li>
+                    </ul>
+                </div>
+    
+                
+                <div class="footer-column">
+                    <h3>Extra Links</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Ask Questions</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Terms Of Use</a></li>
+                    </ul>
+                </div>
+    
+              
+                <div class="footer-column">
+                    <h3>contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 7009912453</li>
+                        <li><i class="fas fa-phone"></i> +123-456-7890</li>
+                        <li><i class="fas fa-envelope"></i> Vishesh01327@gmail.Com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India - 400104</li>
+                    </ul>
+                </div>
+    
+               
+                <div class="footer-column">
+                    <h3>Social Media</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+</body>
+<script 
+src="https://kit.fontawesome.com/6558443b63.js"
+crossorigin="anonymous">
+</script>
+</html>
